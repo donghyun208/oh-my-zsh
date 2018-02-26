@@ -2,8 +2,8 @@ if [[ "$OSTYPE" == linux* ]]; then
     local _sublime_linux_paths > /dev/null 2>&1
     _sublime_linux_paths=(
         "$HOME/bin/sublime_text"
-        "/opt/sublime_text_3/sublime_text"
         "/opt/sublime_text/sublime_text"
+        "/opt/sublime_text_3/sublime_text"
         "/usr/bin/sublime_text"
         "/usr/local/bin/sublime_text"
         "/usr/bin/subl"
@@ -24,12 +24,12 @@ elif  [[ "$OSTYPE" = darwin* ]]; then
     local _sublime_darwin_paths > /dev/null 2>&1
     _sublime_darwin_paths=(
         "/usr/local/bin/subl"
-        "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
         "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
         "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"
-        "$HOME/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
-        "$HOME/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"
+        "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
         "$HOME/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+        "$HOME/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"
+        "$HOME/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
     )
     for _sublime_path in $_sublime_darwin_paths; do
         if [[ -a $_sublime_path ]]; then
